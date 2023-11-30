@@ -1,8 +1,15 @@
+:root {
+    --orange: #FFA62B;
+    --darkblue: #252B42;
+    --lightblue: #00A0C1;
+    --textgrey: #737373;
+}
 html {
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 14px;
     font-weight: 500;
+    background-color: var(--darkblue);
 }
 body {
     margin: 0;
@@ -28,11 +35,26 @@ h1 {
     font-weight: 800;
     line-height: 80px;
 }
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    text-transform: uppercase;
+}
 h4 {
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
     margin: 40px 0;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--darkblue);
+}
+p {
+    line-height: 20px;
 }
 .hero {
     background-image: url(img/cover.png);
@@ -93,9 +115,9 @@ h4 {
     padding: 10px 35px;
     line-height: 26px;
     border-radius: 40px;
-    border: solid #FFA62B 1px;
+    border: solid var(--orange) 1px;
     color: white;
-    background: #FFA62B;
+    background: var(--orange);
     cursor: pointer;   
     font-weight: bolder;
     transition: 1s;
@@ -108,6 +130,50 @@ h4 {
     cursor: pointer;   
     font-weight: bolder;
     transition: 1s;
+}
+.features {
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 100px 0;
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+.section-text {
+    max-width: 470px;
+    text-align: center;
+}
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3,328px);
+    justify-content: center;
+}
+.card {
+    background-color: white;
+    border: 15px solid var(--darkblue);
+    text-align: center;
+    color: var(--textgrey);
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    padding: 35px 35px 0 35px;
+}
+.card-body {
+    padding: 15px 40px 35px 40px;
+    margin: 0;
+    text-align: justify;
+}
+.card-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
     h1 {
@@ -138,5 +204,20 @@ h4 {
     .cta {
         flex-direction: column;
         align-items: center;
+    }
+    .features {
+        font-size: smaller;
+    }
+    .section-header {
+        padding: 20px;
+    }
+    .section-title {
+        width: auto;
+        text-align: center;
+    }
+    .grid-cards {
+        display: grid;
+        grid-template-columns: 328px;
+        padding-bottom: 73px;
     }
 }
