@@ -226,6 +226,22 @@ p {
 .card-name-link {
     color: var(--orange);
 }
+#team-card {
+    padding: 0;
+    gap: 0;
+}
+#team-card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.team-card-links {
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+}
 @media screen and (min-width: 320px) and (max-width: 768px) {
     h1 {
         font-size: 40px;
