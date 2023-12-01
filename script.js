@@ -99,3 +99,45 @@ function CalculatedDogAge (age) {
 CalculatedDogAge (7);
 CalculatedDogAge(2);
 CalculatedDogAge (4);
+
+
+let fruits = [];
+fruits.push("apple", "banana", "orange");
+console.log(fruits.length);
+console.log(fruits);
+
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
+numbers.pop();
+console.log(numbers);
+numbers.shift();
+console.log(numbers);
+
+let colors = ["red", "green", "blue", "yellow"];
+console.log(colors.indexOf("green"));
+console.log("Does the 'colors' array contain 'orange'?", colors.includes("orange"));
+
+let names = ["John", "Jane", "Mike", "Jennifer"];
+names.unshift("David");
+console.log(names);
+console.log(names.indexOf("Mike"));
+
+let numbers2 = [2, 4, 6, 8, 10];
+const contains5 = numbers2.includes(5);
+console.log(numbers2.includes(5) ? "Array includes 5" : "Array doesn't include 5");
+numbers2.push(12);
+console.log(numbers2);
+
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+months.sort();
+console.log(months);
+
+console.log(months.filter(month => month.length > 3));
+
+let selectedMonths = months.slice(5, 10);
+console.log(selectedMonths);
+
+let filteredMonths = months.filter(month => month.length >= 5);
+filteredMonths.sort();
+let resultString = filteredMonths.join('-');
+console.log(resultString);
