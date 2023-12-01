@@ -334,6 +334,98 @@ p {
     cursor: pointer;
     max-height: 62px;
 }
+.footer {
+    background-color: var(--darkblue);
+}
+.footer-header {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 530px;
+}
+.footer-social-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    padding: 0 40px;
+}
+hr {
+    border: none; 
+    color: var(--lightblue);
+    background-color: var(--lightblue);;
+    height: 1px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    padding: 70px 0;
+    gap: 52px;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-header {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+    gap: 620px;
+    color: var(--white);
+}
+.footer-link {
+    text-decoration: none;
+    color: var(--grey);
+}
+.footer-subscribe {
+    display: flex;
+    flex-direction: row;
+}
+.footer-email {
+    display: flex;
+    align-items: center;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    padding: 15px 20px;
+}
+.footer-email:hover {
+    border: 1px solid var(--white);
+}
+.footer-button {
+    display: flex;
+    height: 58px;
+    padding: 15px 22px;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid var(--white);
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+.form-text {
+    font-size: 12px; 
+    color: var(--white); 
+    margin: 0;
+}
+.footer-final {
+    background-color: var(--lightblue);
+    background-position-x: center;
+    padding: 0 195px;
+    margin: 0 auto;
+}
+.footer-final-text {
+    padding: 25px 0;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 auto;
+    max-width: 1020px;
+}
 @media screen and (min-width: 320px) and (max-width: 768px) {
     h1 {
         font-size: 40px;
@@ -390,8 +482,32 @@ p {
     .form-contact {
         grid-template-columns: auto;
     }
+    .footer-social-list {
+        padding: 0;
+    }
     .form-footer-text {
         text-align: center;
         margin-bottom: 20px;
+    }
+    .footer-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .footer-email {
+        width: 7em;
+    }
+    .footer-final {
+        padding: 0;
+    }
+    .footer-final-text {
+        font-weight: lighter;
+        text-align: center;
+        padding: 25px 45px;
     }
 }
