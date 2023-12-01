@@ -141,3 +141,94 @@ let filteredMonths = months.filter(month => month.length >= 5);
 filteredMonths.sort();
 let resultString = filteredMonths.join('-');
 console.log(resultString);
+
+
+let fruits1 = ["apple", "banana", "orange"];
+for (let i = 0; i < fruits1.length; i++) {
+    console.log(fruits1[i]);
+}
+
+let numbers1 = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < numbers1.length; i++) {
+    sum += numbers1[i];
+}
+console.log(sum);
+
+let names1 = ["John", "Jane", "Michael", "Jennifer", "Bobby"];
+let nameLengths = [];
+for (let i = 0; i < names1.length; i++) {
+    nameLengths.push(names1[i].length);
+}
+console.log(nameLengths);
+
+let company = [
+    ["John", "Jane", "Alice"],
+    ["Bob", "Charlie", "David"],
+    ["Eva", "Frank", "Grace"],
+    ["Helen", "Henry"]
+];
+for (let i = 0; i < company.length; i++) {
+    for (let j = 0; j < company[i].length; j++) {
+        console.log(company[i][j]);
+    }
+}
+let allEmployees = [];
+for (let i = 0; i < company.length; i++) {
+    for (let j = 0; j < company[i].length; j++) {
+        allEmployees.push(company[i][j]);
+    }
+}
+allEmployees.sort();
+console.log(allEmployees);
+
+function countProperties(person) {
+    let propertyCount = Object.keys(person).length;
+    return propertyCount;
+}
+let person = { firstName: "John", lastName: "Doe", age: 30, profession: "developer" };
+console.log(countProperties(person));
+
+function generateArray(n) {
+    let resultArray = Array.from({ length: n + 1 }, (_, index) => index);
+    return resultArray;
+}
+let input = 8;
+console.log(generateArray(input));
+
+function findLargestNumber(numbers) {
+    let theBiggestNumber = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > theBiggestNumber) {
+            theBiggestNumber = numbers[i];
+        }
+    }
+    return theBiggestNumber;
+}
+const inputArray = [5, 8, 2, 10, 3];
+console.log(findLargestNumber(inputArray));
+
+function calculateGPA(grades) {
+    let gradeValues = Object.values(grades);
+    let sumOfGrades = gradeValues.reduce((total, grade) => total + grade, 0);
+    let averageGrade = sumOfGrades / gradeValues.length;
+    return averageGrade;
+}
+let studentGrades = { math: 8, literature: 7, history: 9 };
+console.log(calculateGPA(studentGrades));
+
+function Dog (nickname, age, color) {
+    this.nickname = nickname;
+    this.age = age;
+    this.color = color;
+}
+let myDog = new Dog("Buddy", 3, "Brown");
+function addPuppies(dog, numberOfPuppies) {
+    dog.puppies = [];
+
+    for (let i = 1; i <= numberOfPuppies; i++) {
+        dog.puppies.push(`Puppy_${i}`);
+    }
+}
+addPuppies(myDog, 5);
+console.log(myDog);
