@@ -1,0 +1,10 @@
+let country = 'Germany';
+console.log(country);
+let continent = 'Europe';
+console.log(continent);
+let population = 83.2;
+console.log(population);
+let isIsland = false;
+console.log(isIsland);
+let countryDescription = `${country} is located in ${continent}, ${population} million people live there.`;
+console.log(countryDescription);
