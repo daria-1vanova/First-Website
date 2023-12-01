@@ -212,5 +212,44 @@
             </div>
         </div>
     </section>
+    <section class="contact">
+        <div class="container-contact">
+            <h5 class="header-secondary">Contact Us</h5>
+            <h2 class="header-primary">Make an Appointment</h2>
+          <form class="form-appointment">
+            <input type="text" class="form-data" name="fullname" placeholder="Full Name" required>
+            <input type="email" class="form-data" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+            <select class="form-data" name="date">
+                <option value="mo">Monday</option>
+                <option value="tu">Tuesday</option>
+                <option value="we">Wednesday</option>
+                <option value="th">Thursday</option>
+                <option value="fr">Friday</option>
+            </select>
+            <select class="form-data" name="time">
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="11am">12pm</option>
+                <option value="3pm">1pm</option>
+                <option value="3pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+            </select>
+            <textarea class="form-textarea" name="message" rows="5" cols="20" placeholder="Message"></textarea>
+            <input class="form-button" type="submit" value="Book Appointment">
+          </form>
+        </div>
+    </section>
+    <section class="form-footer">
+        <div class="container">
+            <form class="form-contact">
+                <div class="form-footer-text">
+                    <h3 class="form-footer-header">Consulting Agency For Your Business</h3>
+                    <p class="form-footer-par">the quick fox jumps over the lazy dog</p>
+                </div>
+                <input class="form-footer-button" type="submit" value="Contact Us">
+            </form>
+        </div>
+    </section>
 </body>
 </html>
