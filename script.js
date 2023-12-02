@@ -232,3 +232,101 @@ function addPuppies(dog, numberOfPuppies) {
 }
 addPuppies(myDog, 5);
 console.log(myDog);
+
+
+function objectKeyValues (obj) {
+    const keys = Object.keys(obj);
+    let i = 0;
+    while (i < keys.length) {
+        const key = keys[i];
+        const value = obj[key];
+        console.log(`${key}: ${value}`);
+        i++;
+    }
+}
+const object = { name: 'John', age: 30, city: 'New-York' };
+objectKeyValues(object);
+
+function checkKeys(obj, keyToCheck) {
+    for (let key in obj) {
+        if (key === keyToCheck) {
+            return true;
+        }
+    }
+    return false;
+}
+const object1 = { name: 'John', age: 30, city: 'New-York' };
+const key = 'age';
+console.log(checkKeys(object1, key));
+
+function objectValues(obj) {
+    const values = Object.values(obj);
+    let result = '';
+    let i = 0;
+    do {
+        result += values[i];
+        i++;
+    } while (i < values.length);
+    return result;
+}
+const object2 = { prop1: 'Hello', prop2: 'World', prop3: '!' };
+console.log(objectValues(object2));
+
+function countVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+    let i = 0;
+    while (i < str.length) {
+        if (vowels.includes(str[i])) {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+const string = "Hello world, my name is Albert";
+console.log(countVowels(string));
+
+function calculateAverageGrades(gradesObject) {
+    const resultObject = {};
+    for (let student in gradesObject) {
+        const grades = gradesObject[student];
+        const average = calculateAverage(grades);
+        resultObject[student] = `medium: ${average.toFixed(2)}`;
+    }
+    return resultObject;
+}
+function calculateAverage(grades) {
+    const sum = grades.reduce((total, grade) => total + grade, 0);
+    return sum / grades.length;
+}
+const gradesObject = { John: [8, 7, 9], Mary: [9, 9, 10], Alex: [6, 8, 7] };
+const result = calculateAverageGrades(gradesObject);
+console.log(result);
+
+function reverseString(str) {
+    let reversedString = '';
+    let i = str.length - 1;
+    do {
+        reversedString += str[i];
+        i--;
+    } while (i >= 0);
+    return reversedString;
+}
+const string1 = 'Hello, world!';
+console.log(reverseString(string1));
+
+function isPalindrome(str) {
+    let i = 0;
+    let j = str.length - 1;
+    while (i < j) {
+        if (str[i] !== str[j]) {
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
+const string3 = 'level';
+console.log(isPalindrome(string3));
