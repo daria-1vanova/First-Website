@@ -370,3 +370,45 @@ const averageEvaluation = studentEvaluation.reduce((acc,student) => {
     return acc;
 },{});
 console.log(averageEvaluation);
+
+
+const student = {
+    name: 'John',
+    lastName: 'Doe',
+    faculty: 'history',
+    year: 3
+};
+const displayStudentInfo = ({ name, lastName, faculty, year }) => {
+    const fullName = `${name} ${lastName}`;
+    console.log([fullName, faculty, year]);
+};
+displayStudentInfo(student);
+
+const extractElements = ([first, , third]) => {
+    return [first, third];
+};
+const colors1 = ["red", "green", "blue", "violet"];
+const [firstElement, thirdElement] = extractElements(colors1);
+console.log(firstElement);
+console.log(thirdElement);
+
+const gatherArguments = (...args) => {
+    return args;
+};
+console.log(gatherArguments(1, 2, 3, 4, 5));
+
+const combineArrays = (array1, array2) => {
+    return [...array1, ...array2];
+};
+const arrayA = [1, 2, 3];
+const arrayB = ['a', 'b', 'c'];
+console.log(combineArrays(arrayA, arrayB));
+
+const addLanguageToStudent = (student, languageObj) => {
+    return {
+        ...student,
+        language: languageObj.language
+    };
+};
+const language = { language: 'en' };
+console.log(addLanguageToStudent(student, language));
