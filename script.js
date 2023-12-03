@@ -330,3 +330,43 @@ function isPalindrome(str) {
 }
 const string3 = 'level';
 console.log(isPalindrome(string3));
+
+
+const grades = [
+    { name: "Anna", note: 9 },
+    { name: "Denis", note: 7 },
+    { name: "Christian", note: 8 },
+    { name: "Daniel", note: 6 },
+    { name: "Elena", note: 10 }
+];
+const sumOfGrades = grades.reduce((total, student) => total + student.note, 0);
+const averageGrade = sumOfGrades / grades.length;
+console.log(averageGrade.toFixed(0));
+
+const products = [
+    {name: "Tshirt", price: 50, isAvailable: true },
+    {name: "Pants", price: 80, isAvailable: false },
+    {name: "Jacket", price: 120, isAvailable: true },
+    {name: "Shirt", price: 60, isAvailable: true },
+    {name: "Skirt", price: 40, isAvailable: false }
+];
+const availableProducts = products.filter(product => product.isAvailable);
+const productNames = availableProducts.map(product => product.name);
+console.log(productNames);
+ 
+const numbers3 = [10, 5, 8, 15, 3, 20];
+console.log(numbers3.reduce((max, current) => (current > max ? current : max), numbers[0]));
+
+const studentEvaluation = [
+    {John: [8, 7, 9]}, 
+    {Mary: [9, 9, 10]}, 
+    {Alex: [6, 8, 7]}
+];
+const averageEvaluation = studentEvaluation.reduce((acc,student) => {
+    let key = Object.keys(student)[0];
+    let value = student[key];
+    let total = value.reduce((acc, score) => acc + score, 0);
+    acc[key] = (total / value.length).toFixed(0);
+    return acc;
+},{});
+console.log(averageEvaluation);
